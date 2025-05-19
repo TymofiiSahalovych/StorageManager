@@ -13,17 +13,6 @@ public partial class MainPage : ContentPage
 		_services = services;
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
 	private async void OnGoToListClicked(object sender, EventArgs e)
     {
 		try

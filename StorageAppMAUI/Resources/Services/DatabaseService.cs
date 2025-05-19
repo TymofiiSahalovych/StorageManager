@@ -34,7 +34,7 @@ public class DatabaseService
             return _database.InsertAsync(storedObject);
     }
 
-    public Task<int> DeleteObjectsAsync(StoredObject person)
+    public Task<int> DeleteObjectAsync(StoredObject person)
     {
         return _database.DeleteAsync(person);
     }

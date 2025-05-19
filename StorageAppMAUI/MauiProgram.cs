@@ -19,6 +19,7 @@ public static class MauiProgram
 		// Register the DatabaseService as a singleton
 		builder.Services.AddSingleton<DatabaseService>();
 		builder.Services.AddTransient<ListPage>();
+		builder.Services.AddTransient<DetailedObject>();
 
 
 #if DEBUG

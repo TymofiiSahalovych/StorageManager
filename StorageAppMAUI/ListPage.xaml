@@ -12,7 +12,27 @@
             <CollectionView x:Name="ObjectListView">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Label Text="{Binding Name}" FontSize="20"/>
+                        <Grid Padding="10" ColumnDefinitions="*, Auto" HeightRequest="60">
+                            
+                            <!-- Clickable Label acting like a button -->
+                            <Button 
+                                Text="{Binding Name}" 
+                                FontSize="18"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Clicked="OnObjectTapped"/>
+
+                            <!-- Delete Button -->
+                            <Button Grid.Column="1"
+                                    Text="Delete"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    Clicked="OnDeleteClicked"
+                                    CommandParameter="{Binding}" />
+                        </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
